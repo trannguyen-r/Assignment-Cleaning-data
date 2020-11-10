@@ -67,6 +67,6 @@ colnames(dataset) <- dataCols
 #create new tidy set
 secondataset <- aggregate(.~ subjectID + activityID, dataset, mean)
 secondataset <- secondataset[order(secondataset$subjectID, secondataset$activityID),]
-#utput to file "tidy_data.txt"
+#Output to file "tidy_data.txt"
 write.table(secondataset, "tidy_data.txt", row.names = FALSE, 
             quote = FALSE)
